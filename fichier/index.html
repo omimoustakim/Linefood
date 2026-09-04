@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linefood – Cuisine Africaine · Rennes</title>
+  <meta name="description" content="Linefood – Cuisine africaine authentique à Rennes. Commandez vos plats en ligne et récupérez-les sur place." />
+  <meta property="og:title" content="Linefood – Cuisine Africaine · Rennes" />
+  <meta property="og:description" content="Cuisine africaine authentique à Rennes. Commandez en ligne et venez récupérer vos plats !" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://linefood.fr" />
+  <meta property="og:image" content="https://linefood.fr/images/slide-2.jpg" />
+  <meta name="theme-color" content="#07111c" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath d='M18 4C18 4 10 8 10 18H26C26 8 18 4 18 4Z' fill='%23dfb840' opacity='0.9'/%3E%3Crect x='8' y='18' width='20' height='4' rx='2' fill='%23dfb840'/%3E%3Crect x='15' y='22' width='6' height='3' rx='1.5' fill='%23dfb840' opacity='0.7'/%3E%3Ccircle cx='18' cy='3.5' r='1.5' fill='%23f0d68a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;600&family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="images/menu/menu-5.jpg" as="image" fetchpriority="high" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== BANNIÈRE PROMO ===== -->
+  <div class="promo-bar" id="promoBar">
+    <span class="promo-dot"></span>
+    <p>🎉 Commande de <strong>2 plats ou plus</strong> — 1 plat offert&nbsp;!</p>
+    <button class="promo-close" id="promoClose" aria-label="Fermer">×</button>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="logo-wrap">
+      <div class="logo-bell">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF0B3"/>
+              <stop offset="100%" stop-color="#D4AF37"/>
+            </linearGradient>
+          </defs>
+          <path d="M20 4 A2.5 2.5 0 1 0 20 9 A2.5 2.5 0 1 0 20 4 Z" fill="url(#logoGrad)" />
+          <path d="M10 22 C10 12 14 8 20 8 C26 8 30 12 30 22 Z" fill="url(#logoGrad)" />
+          <path d="M6 24 C6 22.5 8 21.5 20 21.5 C32 21.5 34 22.5 34 24 C34 26 28 27.5 20 27.5 C12 27.5 6 26 6 24 Z" fill="url(#logoGrad)" />
+          <path d="M17 18 C17 14 20 13 20 11 C20 13 23 14 23 18 C23 20 20 21 20 21 C20 21 17 20 17 18 Z" fill="#07111c" opacity="0.25" />
+        </svg>
+      </div>
+      <div>
+        <div class="logo-text">LINEFOOD</div>
+        <span class="logo-sub">Cuisine Africaine</span>
+      </div>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#menu">Menu</a>
+      <a href="#avis">Avis</a>
+      <a href="#about">À propos</a>
+      <a href="tel:+33746513094">Contact</a>
+    </div>
+    <a href="#commander" class="nav-cta">Commander</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg" style="background-image: url('images/menu/menu-5.jpg');"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="dot"></span>Rennes, France<span class="dot"></span>
+      </div>
+      <h1>La saveur<br><em>africaine</em> en ligne</h1>
+      <p class="hero-sub">Plats authentiques · À emporter</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Voir le menu</a>
+        <a href="#commander" class="btn-outline">Commander</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== COMMENT ÇA MARCHE ===== -->
+  <section class="how-section section-id" id="comment">
+    <div class="how-inner">
+      <div class="sec-center">
+        <p class="sec-tag">Simple &amp; rapide</p>
+        <h2 class="sec-title">Comment ça <em>marche</em>&nbsp;?</h2>
+        <div class="title-ornament"><span></span><span class="dot"></span><span></span></div>
+      </div>
+      <div class="how-steps">
+
+        <div class="how-step">
+          <div class="how-num">01</div>
+          <div class="how-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3>Choisissez vos plats</h3>
+          <p>Parcourez le menu, ajoutez vos plats préférés au panier en un clic.</p>
+        </div>
+
+        <div class="how-arrow">→</div>
+
+        <div class="how-step">
+          <div class="how-num">02</div>
+          <div class="how-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <h3>Remplissez le formulaire</h3>
+          <p>Indiquez vos coordonnées et l'heure de retrait souhaitée.</p>
+        </div>
+
+        <div class="how-arrow">→</div>
+
+        <div class="how-step">
+          <div class="how-num">03</div>
+          <div class="how-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3>Récupérez vos plats</h3>
+          <p>Votre commande part sur WhatsApp. On vous confirme et c'est prêt&nbsp;!</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="menu-section section-id" id="menu">
+    <div class="sec-center">
+      <h2 class="sec-title">Le <em>Menu</em></h2>
+      <div class="title-ornament"><span></span><span class="dot"></span><span></span></div>
+      <div class="menu-filter">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="plat">Plats</button>
+        <button class="filter-btn" data-filter="dessert">Desserts</button>
+      </div>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+
+      <article class="menu-card" data-cat="plat" data-name="Riz" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-1.jpg" alt="Riz" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Riz</h3>
+          <p class="menu-desc">Riz blanc + sauce d'arachide + pilon de poulet</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Atassi" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-2.jpg" alt="Atassi" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Atassi</h3>
+          <p class="menu-desc">Atassi + friture + pilon de poulet</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Riz Gras" data-price="15 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-3.jpg" alt="Riz Gras" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Riz Gras</h3>
+          <p class="menu-desc">Riz gras + alloco + jus de légumes + pilon de poulet</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€15</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Piron" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-4.jpg" alt="Piron" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Piron</h3>
+          <p class="menu-desc">Piron rouge + jus de légumes + pilon/cuisse de poulet</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Attiéké" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-5.jpg" alt="Attiéké" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Attiéké</h3>
+          <p class="menu-desc">Attiéké + alloco + poisson chinchard ou tilapia</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Pâte Rouge" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-6.jpg" alt="Pâte Rouge" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Pâte Rouge</h3>
+          <p class="menu-desc">Pâte rouge + jus de légumes + poulet/poisson chinchard</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Pâte Blanche" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-8.jpg" alt="Pâte Blanche" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Pâte Blanche</h3>
+          <p class="menu-desc">Pâte blanche + sauce d'arachide + gombo + poulet/poisson</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Come" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-9.jpg" alt="Come" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Come</h3>
+          <p class="menu-desc">Sauce tomate + oignon-piment + poisson</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Dokounou / Khom" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-7.jpg" alt="Dokounou / Khom" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Dokounou / Khom</h3>
+          <p class="menu-desc">3 boules + sauce tomate + 1 poisson entier + oignon + piment noir</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="plat" data-name="Igname pilé" data-price="13 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-11.jpg" alt="Igname pilé" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-plat">Plat</span>
+          <h3 class="menu-name">Igname pilé</h3>
+          <p class="menu-desc">sauce d'arachide + sauce gombo + viande</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€13</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="dessert" data-name="Tiramisu" data-price="4 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-10.jpg" alt="Tiramisu" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-dessert">Dessert</span>
+          <h3 class="menu-name">Tiramisu</h3>
+          <p class="menu-desc">Dessert gourmand à l'italienne</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€4</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-cat="dessert" data-name="Dègué" data-price="4 €">
+        <div class="menu-img-wrap">
+          <img src="images/menu/menu-11.jpg" alt="Dègué" class="menu-img" loading="lazy" />
+        </div>
+        <div class="menu-info">
+          <span class="menu-badge badge-dessert">Dessert</span>
+          <h3 class="menu-name">Dègué</h3>
+          <p class="menu-desc">Dessert traditionnel africain</p>
+        </div>
+        <div class="menu-right">
+          <span class="menu-price">€4</span>
+          <div class="btn-add-wrap"><button class="btn-add" aria-label="Ajouter au panier">+</button></div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="sec-center" style="margin-top:2rem;">
+      <button class="btn-show-more" id="showMoreBtn">Voir plus</button>
+    </div>
+  </section>
+
+  <!-- ===== TÉMOIGNAGES ===== -->
+  <section class="avis-section section-id" id="avis">
+    <div class="avis-inner">
+      <div class="sec-center">
+        <p class="sec-tag">Ils ont commandé</p>
+        <h2 class="sec-title">Ce qu'ils en <em>disent</em></h2>
+        <div class="title-ornament"><span></span><span class="dot"></span><span></span></div>
+      </div>
+      <div class="avis-grid">
+
+        <div class="avis-card">
+          <div class="avis-stars">★★★★★</div>
+          <p class="avis-text">« Le riz gras était incroyable, exactement comme chez ma grand-mère au pays. La récupération était rapide et le plat encore chaud à l'arrivée. »</p>
+          <div class="avis-author">
+            <div class="avis-avatar">A</div>
+            <div>
+              <span class="avis-name">Aminata D.</span>
+              <span class="avis-lieu">Rennes · Centre</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="avis-card avis-card--featured">
+          <div class="avis-stars">★★★★★</div>
+          <p class="avis-text">« J'avais commandé pour toute la famille, 4 plats différents. Tout était parfait, généreux et savoureux. On recommande sans hésiter&nbsp;!</p>
+          <div class="avis-author">
+            <div class="avis-avatar">K</div>
+            <div>
+              <span class="avis-name">Kevin M.</span>
+              <span class="avis-lieu">Rennes · Villejean</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="avis-card">
+          <div class="avis-stars">★★★★★</div>
+          <p class="avis-text">« L'attiéké au chinchard m'a rappelé mes vacances en Côte d'Ivoire. Mariline cuisine avec une vraie générosité, ça se sent dans chaque bouchée. »</p>
+          <div class="avis-author">
+            <div class="avis-avatar">S</div>
+            <div>
+              <span class="avis-name">Sophie L.</span>
+              <span class="avis-lieu">Rennes · Beaulieu</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMANDER ===== -->
+  <section class="resa-section section-id" id="commander">
+    <div class="resa-wrap">
+      <div class="sec-center">
+        <p class="sec-tag">Votre commande</p>
+        <h2 class="sec-title">Finaliser la <em>commande</em></h2>
+        <div class="sec-divider"></div>
+      </div>
+      <div class="resa-form">
+        <div class="form-recap" id="formRecap">
+          <p class="recap-label">📋 Votre commande</p>
+          <div id="recapList"><p class="recap-empty">Ajoutez des plats depuis le menu ✨</p></div>
+        </div>
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="fname">Nom complet</label>
+            <input type="text" id="fname" placeholder="Votre nom" autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="fphone">Numéro WhatsApp</label>
+            <input type="tel" id="fphone" placeholder="+33 6 00 00 00 00" autocomplete="tel" />
+          </div>
+
+          <div class="form-group">
+            <label for="faddress">Adresse (optionnel)</label>
+            <input type="text" id="faddress" placeholder="Adresse de récupération" autocomplete="street-address" />
+          </div>
+
+          <div class="form-group">
+            <label for="fdate">Date de retrait</label>
+            <input type="date" id="fdate" />
+          </div>
+
+          <div class="form-group">
+            <label for="fheure">Heure de retrait</label>
+            <input type="time" id="fheure" />
+          </div>
+
+          <div class="form-group">
+            <label for="fpersonnes">Nombre de personnes</label>
+            <input type="number" id="fpersonnes" placeholder="2" min="1" />
+          </div>
+
+          <div class="form-group">
+            <label for="femail">Email (optionnel)</label>
+            <input type="email" id="femail" placeholder="email@exemple.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group full">
+            <label for="fnote">Note (optionnel)</label>
+            <textarea id="fnote" placeholder="Digicode, étage, instructions..." rows="3"></textarea>
+          </div>
+
+        </div>
+        <div class="form-group full">
+          <label class="checkbox-label">
+            <input type="checkbox" id="fconsent" />
+            <span>J'accepte que mes données soient traitées conformément à la <a href="politique-confidentialite.html" target="_blank">Politique de Confidentialité</a> et je valide ma commande.</span>
+          </label>
+        </div>
+        <button type="button" class="resa-submit" id="resaBtn">Commander sur WhatsApp</button>
+        <p class="resa-note">📞 Appelez aussi au <a href="tel:+33746513094">+33 7 46 51 30 94</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ZONE & HORAIRES ===== -->
+  <section class="zone-section section-id" id="zone">
+    <div class="zone-inner">
+
+      <div class="zone-col">
+        <p class="sec-tag">Secteurs</p>
+        <h2 class="zone-title">Où <em>récupérer</em></h2>
+        <div class="about-line"></div>
+        <p class="zone-body">Nous sommes basés à Rennes. La récupération se fait sur place — contactez-nous sur WhatsApp pour l'adresse exacte.</p>
+        <ul class="zone-list">
+          <li><span class="zone-check">✓</span> Rennes Centre</li>
+          <li><span class="zone-check">✓</span> Villejean · Beauregard</li>
+          <li><span class="zone-check">✓</span> Cleunay · Arsenal</li>
+          <li><span class="zone-check">✓</span> Beaulieu · Patton</li>
+          <li><span class="zone-check">✓</span> Saint-Jacques · Cesson</li>
+          <li><span class="zone-check zone-check--ask">?</span> Autre commune — nous contacter</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=33746513094" target="_blank" rel="noopener" class="zone-cta">Nous contacter</a>
+      </div>
+
+      <div class="zone-col">
+        <p class="sec-tag">Horaires</p>
+        <h2 class="zone-title">Nos <em>horaires</em></h2>
+        <div class="about-line"></div>
+        <div class="horaires-list">
+          <div class="horaire-row">
+            <span class="horaire-day">Lundi – Vendredi</span>
+            <span class="horaire-time">11h30 – 14h00 &amp; 18h00 – 21h00</span>
+          </div>
+          <div class="horaire-row">
+            <span class="horaire-day">Samedi</span>
+            <span class="horaire-time">12h00 – 22h00</span>
+          </div>
+          <div class="horaire-row">
+            <span class="horaire-day">Dimanche</span>
+            <span class="horaire-time horaire-off">Sur commande uniquement</span>
+          </div>
+        </div>
+        <div class="horaire-note">
+          <span>⏱</span>
+          <p>Temps de préparation estimé&nbsp;: <strong>20 à 30 min</strong> après confirmation.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="about-section section-id" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-photo-frame">
+          <div class="about-photo">
+            <img src="mariline.jpg" alt="Mariline - Linefood" />
+          </div>
+          <div class="about-name-tag">Mariline <span>Fondatrice &amp; Cheffe</span></div>
+        </div>
+        <div class="about-text">
+          <p class="sec-tag">Notre histoire</p>
+          <h2 class="sec-title about-title">À <em>propos</em></h2>
+          <div class="about-line"></div>
+          <p>Derrière Linefood se trouve Mariline, passionnée de cuisine africaine et amoureuse des saveurs qui rassemblent. Inspirée par les recettes transmises au sein de sa famille, elle a créé Linefood avec une mission simple : faire découvrir une cuisine authentique, généreuse et préparée avec soin.</p>
+          <p>Chaque plat est cuisiné maison à partir d'ingrédients soigneusement sélectionnés afin d'offrir une expérience unique à chaque commande. Vous pouvez venir récupérer votre commande sur place et profiter des saveurs de l'Afrique où que vous soyez.</p>
+          <blockquote class="chef-quote">« Chaque plat raconte une histoire, et chaque client fait partie de cette aventure culinaire. »</blockquote>
+          <div class="about-stats-bar">
+            <div class="stat-item"><span class="stat-num">100%</span> Fait maison</div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-num">🥘</span> Recettes authentiques</div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-num">🥡</span> À emporter</div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-num">❤️</span> Préparé avec passion</div>
+          </div>
+          <a href="#commander" class="about-cta">Commander un plat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section section-id" id="faq">
+    <div class="faq-inner">
+      <div class="sec-center">
+        <p class="sec-tag">Questions fréquentes</p>
+        <h2 class="sec-title">Vous vous <em>demandez…</em></h2>
+        <div class="title-ornament"><span></span><span class="dot"></span><span></span></div>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-q">Comment commander&nbsp;?<span class="faq-icon">+</span></summary>
+          <p class="faq-a">Ajoutez vos plats depuis le menu, remplissez le formulaire et cliquez sur «&nbsp;Commander sur WhatsApp&nbsp;». On vous confirme la préparation sous quelques minutes et vous récupérez votre commande sur place.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Quel est le montant minimum&nbsp;?<span class="faq-icon">+</span></summary>
+          <p class="faq-a">Il n'y a pas de minimum de commande. Commandez ce qui vous fait envie, que ce soit un plat ou plusieurs.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Comment se passe le paiement&nbsp;?<span class="faq-icon">+</span></summary>
+          <p class="faq-a">Le paiement se fait sur place, en espèces ou par virement. Le total est affiché dans le récapitulatif avant l'envoi de la commande.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Y a-t-il des allergènes&nbsp;?<span class="faq-icon">+</span></summary>
+          <p class="faq-a">Certains plats contiennent des arachides, du gluten ou du poisson. En cas d'allergie, signalez-le dans la note de commande.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Où récupérer ma commande&nbsp;?<span class="faq-icon">+</span></summary>
+          <p class="faq-a">La récupération se fait à Rennes. L'adresse exacte vous sera communiquée par WhatsApp après confirmation de votre commande.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">LINEFOOD</div>
+    <div class="footer-info">
+      <span>📞 <a href="tel:+33746513094">+33 7 46 51 30 94</a></span>
+      <span>📍 Rennes, France</span>
+      <span>🍽️ Cuisine Africaine</span>
+      <span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".25" stop-color="#fa7e1e"/><stop offset=".5" stop-color="#d62976"/><stop offset=".75" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="url(#ig)"/><rect x="5" y="5" width="14" height="14" rx="3.5" fill="none" stroke="#fff" stroke-width="1.4"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.4"/><circle cx="16.5" cy="7.5" r="1.8" fill="#fff"/></svg> <a href="https://www.instagram.com/linef.ood" target="_blank" rel="noopener">@linef.ood</a></span>
+      <span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="5" fill="#010101"/><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#fff"/></svg> <a href="https://www.tiktok.com/@mariline_fitgirl" target="_blank" rel="noopener">@mariline_fitgirl</a></span>
+    </div>
+    <div class="footer-legal">
+      <a href="mentions-legales.html">Mentions Légales</a>
+      <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+      <a href="cgu.html">CGU</a>
+    </div>
+    <p class="footer-copy">© 2025 Linefood · Tous droits réservés</p>
+  </footer>
+
+  <!-- ===== PANIER FLOTTANT ===== -->
+  <div class="panier-bar" id="panierBar">
+    <div class="panier-info">
+      <span class="panier-icon">🛒</span>
+      <span class="panier-count" id="panierCount">0 article</span>
+      <span class="panier-preview" id="panierPreview"></span>
+    </div>
+    <div class="panier-actions">
+      <button class="panier-vider" id="panierVider">Vider</button>
+      <button class="panier-commander" id="panierCommander">Commander</button>
+    </div>
+  </div>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</button>
+    <img src="" alt="" id="lightboxImg" />
+    <span class="lightbox-counter" id="lightboxCounter"></span>
+  </div>
+
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a href="https://api.whatsapp.com/send?phone=33746513094" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ===== BANNIERE COOKIES RGPD ===== -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p class="cookie-text">🍪 Ce site utilise uniquement des cookies nécessaires à son fonctionnement (panier). Consultez notre <a href="politique-confidentialite.html">Politique de Confidentialité</a> pour en savoir plus.</p>
+      <div class="cookie-actions">
+        <button class="cookie-accept" id="cookieAccept">Accepter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

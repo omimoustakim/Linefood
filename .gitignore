@@ -1,0 +1,5 @@
+swap.ps1
+*.swp
+*.tmp
+.DS_Store
+Thumbs.db
